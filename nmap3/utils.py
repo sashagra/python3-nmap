@@ -24,7 +24,6 @@ import sys
 import os
 import ctypes
 import functools
-
 from nmap3.exceptions import NmapNotInstalledError
 
 __author__ = 'Wangolo Joel (inquiry@nmapper.com)'

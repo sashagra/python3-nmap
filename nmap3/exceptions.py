@@ -28,7 +28,7 @@ class NmapNotInstalledError(Exception):
     def __init__(self, path=""):
         self.message = f"Nmap is either not installed or we couldn't locate \
 nmap path. Please ensure nmap is installed and provide right path string. \n\
-Provided: *{path if path else 'Not provided'}*"
+Provided: {path if path else 'Not provided'}"
         super().__init__(self.message)
         
 class NmapXMLParserError(Exception):

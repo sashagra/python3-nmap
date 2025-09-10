@@ -208,6 +208,7 @@ class Nmap(object):
         self.top_ports = self.parser.filter_top_ports(xml_root)
         return self.top_ports
 
+    @user_is_root
     def nmap_detect_firewall(self, target, arg="-sA", args=None):  # requires root
         """
         nmap -oX - nmmapper.com -sA
@@ -273,7 +274,6 @@ class Nmap(object):
             # Response is bytes so decode the output and return
             return output.decode('utf8').strip()
             
-
     def get_xml_et(self, command_output):
         """
         @ return xml ET
